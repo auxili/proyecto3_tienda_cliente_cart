@@ -11,8 +11,8 @@
         <!-- Bootstrap core CSS -->
         <link href="bootstrap/bootstrap.css" rel="stylesheet">
         <link href="css/servisport.css" rel="stylesheet">
-        <link href="fuelux/fuelux.min.css" rel="stylesheet">
-
+        <link rel="stylesheet" href="fuelux/fuelux.min.css">
+        <link href="chosen/chosen.css" rel="stylesheet" />
 
         <!-- Add custom CSS here -->
         <link href="css/shop-homepage.css" rel="stylesheet">
@@ -48,8 +48,8 @@
             .no_margin_left {
                 margin-left: 0;
             }
-            .fuelux input.span4{
-                width: 160px;
+            input.span4{
+                width: 155px;
             }
             .input-mini{
                 width: 60px;
@@ -58,25 +58,17 @@
                 float:none;
                 margin-left:0;
             }
-            .fuelux .span5{
-                width: 600px;
-            }
-
-            .fuelux .span6{
-                width: 280px;
+            .span6{
+                width: 250px;
                 float: left;
-                margin-right:  10px;
             }
-            .fuelux .span7{
+            .span7{
                 float: left;
-                width: 280px;
+                width: 250px;
+                margin-left: 20px;
             }
             .control-group{
                 margin-bottom: 9px;
-            }
-            tr th{
-                background-color: #333333;
-                color:white;
             }
 
         </style>
@@ -98,33 +90,33 @@
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a class="glyphicon glyphicon-file" href="#about"> Products</a></li>
-                        <li><a class="glyphicon glyphicon-globe" href="#services"> Services</a></li>
-                        <li><a class="glyphicon glyphicon-envelope" href="#contact"> Contact</a></li>
-                        <li><a class="glyphicon glyphicon-shopping-cart" href="#contact"> Cart<span class="badge">2</span></a></li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle glyphicon glyphicon-user" data-toggle="dropdown"> Login</a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <div class="col-md-12 column">
-                                        <form role="form">
-                                            <div class="form-group">
-                                                <label for="exampleInputEmail1">Email address</label><input type="email" class="form-control" id="exampleInputEmail1" />
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="exampleInputPassword1">Password</label><input type="password" class="form-control" id="exampleInputPassword1" />
-                                            </div>
-                                            <button type="submit" class="btn btn-default">Submit</button>
-                                        </form>
-                                    </div>
-                                </li>
-
+                                    <ul class="nav navbar-nav">
+                                <li><a class="glyphicon glyphicon-file" href="#about"> Products</a></li>
+                                <li><a class="glyphicon glyphicon-globe" href="#services"> Services</a></li>
+                                <li><a class="glyphicon glyphicon-envelope" href="#contact"> Contact</a></li>
+                                <li><a class="glyphicon glyphicon-shopping-cart" href="#contact"> Cart<span class="badge">2</span></a></li>
                             </ul>
-                        </li>
-                    </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle glyphicon glyphicon-user" data-toggle="dropdown"> Login</a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <div class="col-md-12 column">
+                                                <form role="form">
+                                                    <div class="form-group">
+                                                        <label for="exampleInputEmail1">Email address</label><input type="email" class="form-control" id="exampleInputEmail1" />
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="exampleInputPassword1">Password</label><input type="password" class="form-control" id="exampleInputPassword1" />
+                                                    </div>
+                                                    <button type="submit" class="btn btn-default">Submit</button>
+                                                </form>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                            </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container -->
         </nav>
@@ -231,9 +223,10 @@
                         </div>
                     </div>
                 </div>
-                <!-- BEGIN CART DIV -->
-                <div class="col-md-9">
+
+                <div class="col-md-12">
                     <div class="container no-js fuelux">
+
                         <div id="my-wizard" class="wizard">
                             <ul class="steps">
                                 <li data-target="#step1" class="active"><span class="badge badge-info">1</span>Step 1<span class="chevron"></span></li>
@@ -249,10 +242,12 @@
                         </div>
                         <div class="step-content">
                             <div class="step-pane active" id="step1">
-                                
-                                <div class="span5 no_margin_left">
-                                    <h3>Summary &nbsp; </h3>
-                                    <table class="table table-bordered">
+                                <div class="span6 no_margin_left">
+                                    <p>
+                                        Please take you a minute to confirm your delivery.
+                                    </p>
+
+                                    <table class="table">
                                         <tr>
                                             <th>Remove</th>
                                             <th>Image</th>
@@ -279,17 +274,11 @@
                                             <td>260&#8364</td>
                                         </tr>
                                     </table>
-                                    <button class="btn btn-mini" type="submit">Update</button>
-                                </div>
-                                <div class="span5 no_margin_left">
-                                    <h3>Other special products</h3>
-                                    
+                                    <button class="btn btn-primary" type="submit">Update</button>
                                 </div>
                             </div>
                             <div class="step-pane" id="step2">
-                                
                                 <div class="span6 no_margin_left">
-                                    <h3>Login &nbsp; </h3>
                                     <div class="control-group">
                                         <label class="control-label">New Customer </label><br>
                                         <p>By creating an account you will be able to shop faster, be up to date on an order's status, and keep track of the orders you have previously made.</p></label>
@@ -303,7 +292,6 @@
 
                                 </div>
                                 <div class="span7">
-                                    <h3> &nbsp;</h3>
                                     <div class="control-group">
                                         <label class="control-label">Registered Customer </label><br>
                                         <p>If you have an account, please Log in.</p>
@@ -322,159 +310,70 @@
 
                             </div>
                             <div class="step-pane" id="step3">
-                                
-
-                                <div class="wizard-input-section">
-                                    
-                                    <div class="span6 no_margin_left">  
-                                        <h3>Address &nbsp; </h3>
-                                        <div class="control-group">
-                                            <label class="control-label">First Name</label>
-                                            <div class="controls docs">
-                                                <input type="text" placeholder="First Name" class="span4">
-                                            </div>
-                                        </div>
-                                        <div class="control-group">
-                                            <label class="control-label">Last Name</label>
-                                            <div class="controls docs">
-                                                <input type="text" placeholder="Last Name" class="span4">
-                                            </div>
-                                        </div>
-                                        <div class="control-group">
-                                            <label class="control-label">Email Address</label>
-                                            <div class="controls docs">
-                                                <input type="text" placeholder="Email Address" class="span4">
-                                            </div>
-                                        </div>
-                                        <div class="control-group">
-                                            <label class="control-label">Telephone</label>
-                                            <div class="controls docs">
-                                                <input type="text" placeholder="Telephone" class="span4">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="span7">  
-                                        <h3> &nbsp;</h3>
-                                        <div class="control-group">
-                                            <label class="control-label">Mobile Phone</label>
-                                            <div class="controls docs">
-                                                <input type="text" placeholder="Mobile Phone" class="span4">
-                                            </div>
-                                        </div>
-                                        <div class="control-group">
-                                            <label class="control-label">City</label>
-                                            <div class="controls docs">
-                                                <input type="text" placeholder="City" class="span4">
-                                            </div>
-                                        </div>
-                                        <div class="control-group">
-                                            <label class="control-label">Zip</label>
-                                            <div class="controls docs">
-                                                <input type="text" placeholder="example 46000" class="span4">
-                                            </div>
-                                        </div>
-                                        <div class="control-group">
-                                            <label class="control-label">Country</label>
-                                            <div class="controls docs">
-                                                <input type="text" placeholder="Country" class="span4">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
+                                step3
                             </div>
-                            <div class="step-pane" id="step4">
-                                <div class="span5 no_margin_left table-responsive">
-                                    <h3>Shipping &nbsp; </h3>
-                                    <table class="table table-bordered">
-                                        <tr>
-                                            <th colspan="4">CHOOSE A SHIPPING OPTION FOR</th>
-                                        <tr>
-                                            <td><input type="radio" value="option1" id="optionsRadio" name="radioShipping"></td>
-                                            <td><img src="img/server_new.png"></td>
-                                            <td><strong>Store</strong><br>Pick up in Store <br> The best price and speed</td>
-                                            <td>Free!</td>
-                                        </tr>
-                                        <tr>
-                                            <td><input type="radio" value="option1" id="optionsRadio" name="radioShipping"></td>
-                                            <td><img src="img/server_new.png"></td>
-                                            <td><strong>DHL</strong><br>Delibery in 36/72h</td>
-                                            <td>6€</td>
-                                        </tr>
-                                        <tr>
-                                            <td><input type="radio" value="option1" id="optionsRadio" name="radioShipping"></td>
-                                            <td><img src="img/server_new.png"></td>
-                                            <td><strong>DHL</strong><br>Delibery in 24h</td>
-                                            <td>10€</td>
-                                        </tr>
-                                    </table>
-                                </div>
-                            </div>
-                            <div class="step-pane" id="step5">
-                                <h3>Payment &nbsp; </h3>
-                            </div>
-
-                            <!-- /well -->
-
-
                         </div>
 
+                        <!-- /well -->
 
 
                     </div>
 
+
+
                 </div>
 
-                <!-- /.container -->
-
-                <div class="container">
-
-                    <hr>
-
-                    <footer>
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <p>Copyright &copy; ServiSport Valencia <a href="http://google.com/">
-                                        ServiSport Valencia</a></p>
-                            </div>
-                        </div>
-                    </footer>
-
-                </div><!-- /.container -->
             </div>
+
+            <!-- /.container -->
+
+            <div class="container">
+
+                <hr>
+
+                <footer>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <p>Copyright &copy; ServiSport Valencia <a href="http://google.com/">
+                                    ServiSport Valencia</a></p>
+                        </div>
+                    </div>
+                </footer>
+
+            </div><!-- /.container -->
         </div>
-            <!-- JavaScript -->
-            <script src="js/jquery-1.10.2.js"></script>
-            <script src="js/bootstrap.js"></script>
-           <script src="js/stepWizard.js"></script>
-            <script src="js/loader.min.js"></script>
-            <script>
-                $(document).ready(function() {
+        <!-- JavaScript -->
+        <script src="js/jquery-1.10.2.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/stepWizard.js"></script>
+        <script src="js/loader.min.js"></script>
+        <script>
+            $(document).ready(function() {
 
-                    $('#my-wizard').on('change', function(e, data) {
-                        console.log('change');
-                        if (data.step === 3 && data.direction === 'next') {
-                            // return e.preventDefault();
-                        }
-                    });
-
-                    $('#my-wizard').on('changed', function(e, data) {
-                        console.log('changed');
-                    });
-
-                    $('#my-wizard').on('finished', function(e, data) {
-                        console.log('finished');
-                    });
-
-                    $('.btn-prev').on('click', function() {
-                        console.log('prev');
-                    });
-
-                    $('.btn-next').on('click', function() {
-                        console.log('next');
-                    });
+                $('#my-wizard').on('change', function(e, data) {
+                    console.log('change');
+                    if (data.step === 3 && data.direction === 'next') {
+                        // return e.preventDefault();
+                    }
                 });
-            </script>
+
+                $('#my-wizard').on('changed', function(e, data) {
+                    console.log('changed');
+                });
+
+                $('#my-wizard').on('finished', function(e, data) {
+                    console.log('finished');
+                });
+
+                $('.btn-prev').on('click', function() {
+                    console.log('prev');
+                });
+
+                $('.btn-next').on('click', function() {
+                    console.log('next');
+                });
+            });
+        </script>
 
     </body>
 </html>
